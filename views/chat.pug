@@ -18,6 +18,7 @@ html
         input#message.form-contorl(type='text')
         button.btn.btn-primary(type='submit') 전송
       #box.box
+
 	  
     script.
       var socket = io(); 
@@ -37,6 +38,12 @@ html
       $('#name').val(name);
       $('#chatLog').append('<알림> ' + oldname + '님이 ' + name +'님으로 닉네임을 변경했습니다.\n');
       });
+	  
+      socket.on('print name_list',function(name_list){
+      for(var i=0; i<name_list.length; i++){
+      $('#chatLog').append(name_list[i]+'\n');}
+      });
+
 	  
       socket.on('receive message', function(msg){ 
       $('#chatLog').append(msg+'\n');
