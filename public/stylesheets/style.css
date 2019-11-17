@@ -1,22 +1,15 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-
 // style.css
 
-#chatLog{
-	width: 50%; 
-	height: 900px;
-}
+
 #name{ 
 	width: 10%; 
 }
+
+#chatLog{
+	width: 50%; 
+	height: 500px;
+}
+
 
 #message{ 
 	width: 35%; 
